@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import get_pnr_status
+from .views import PNRStatusView
 
 urlpatterns = [
-    path('status/', get_pnr_status, name='get_pnr_status'),
+    path('status/', PNRStatusView.as_view(), name='pnr_status'),
 ]
